@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Devise Clone</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="links">
+          <% if session[:user] %>
+            <%= link_to "Edit Profile ", profile_edit_profile_path ,{:style=>'color:#FFFFFF;', :class => "css_class"} %> |
+            <%= link_to " Logout", account_logout_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %>|
+            <%= link_to "Reset Password", password_reset_password_path,{:style=>'color:#FFFFFF;', :class => "css_class"} %>
+            <% else %>
+            <%= link_to "Sign Up ", account_signup_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> |
+            <%= link_to " Login", account_login_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %>
+          <% end %>
+    </div>
+  
+ <div class="container">
+ 
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="/assets/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Every new application is a <br> new experience</span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+      <div class="back">
+        <img class="backImg" src="/assets/backImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+          
+    </div>
+    
+    <div class="forms">
+        <div class="form-content">
+          <%= yield %>
+       
+      </div>
+       
+    </div>
+  
+       
+       
+  
+    
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<div class="login-form">
+
+  <div class="title">Login</div>
+  <%= flash[:notice] %>
+  <%= form_with url: "/account/login", mehtod: :post do |f| %>
+ 
+    <div class="input-boxes">    
+    <div class="input-box" >
+      <%= f.text_field :email, placeholder: "Enter email" %>
+    </div>            
+    <div class="input-box" >
+      <%= f.password_field :password, placeholder: "Enter password"  %>
+    </div>
+    </div>
+  <div class="button input-box">         
+  <div class="button input-box" >
+    <%= f.submit  "Login" %>
+  </div>
+  </div>  
+   <div class="text sign-up-text"><a href="/password/forget_password">Forget Password?</a></div>
+   </div>         
+
+</div>
+  <% end %>
+
