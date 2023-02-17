@@ -18,14 +18,6 @@ class PasswordController < ApplicationController
     (0...6).map { (65 + rand(26)).chr }.join
   end
   
-    # iden=session[:user]
-    # entered_password= params[:password]
-    # @user=User.find_by_id(iden)
-    # if session[:user]
-    #   @user.update(:password=>entered_password)
-    #   redirect_to account_login_url
-    # end
-
     def reset_password
       @user = User.find(session[:user])
       if request.post?

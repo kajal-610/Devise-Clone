@@ -1,1 +1,14 @@
-<h1> Welcome to Dashboard</h2>
+
+<div class="login-form">
+
+<div class="title">My Dashboard</div>
+<% if @user.header_image.attached? %>
+    <%= image_tag @user.header_image, width: "150px" %> <br>
+<% else %>
+    <%= image_tag "/assets/images.jpeg", width: "150px"%>
+<% end %>
+<%= "Hey " + @user.first_name %>
+<%= @user.last_name %>
+
+</div>
+

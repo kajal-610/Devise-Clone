@@ -1,9 +1,9 @@
 class User < ApplicationRecord
-    has_one_attached :profile_image
+    has_one_attached :header_image
     attr_accessor :password
 
-     validates :email, uniqueness: true, length: {in: 5..50}
-     validates :password, presence: true,confirmation: true, length: {minimum:2},on: :create
+    validates :email, uniqueness: true, length: {in: 5..50}
+    validates :password, presence: true,confirmation: true, length: {minimum:2},on: :create
 
     before_save :encrypt_password
 

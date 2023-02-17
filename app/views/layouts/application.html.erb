@@ -20,10 +20,8 @@
             <%= link_to "Sign Up ", account_signup_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %> |
             <%= link_to " Login", account_login_path, {:style=>'color:#FFFFFF;', :class => "css_class"} %>
           <% end %>
-    </div>
-  
+  </div>
  <div class="container">
- 
     <input type="checkbox" id="flip">
     <div class="cover">
       <div class="front">
@@ -40,20 +38,12 @@
           <span class="text-2">Let's get started</span>
         </div>
       </div>
-          
     </div>
-    
     <div class="forms">
         <div class="form-content">
           <%= yield %>
-       
-      </div>
-       
-    </div>
-  
-       
-       
-  
-    
+        </div>
+    </div> 
+  </div>
   </body>
 </html>

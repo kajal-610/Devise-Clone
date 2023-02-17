@@ -17,7 +17,7 @@ body{
 }
 .container{
   position: relative;
-  max-width: 850px;
+  max-width: 900px;
   width: 100%;
   background: #fff;
   padding: 40px 30px;
@@ -35,9 +35,9 @@ body{
   transform-origin: left;
   transform-style: preserve-3d;
 }
-.container #flip:checked ~ .cover{
+/* .container #flip:checked ~ .cover{
   transform: rotateY(-180deg);
-}
+} */
  .container .cover .front,
  .container .cover .back{
   position: absolute;

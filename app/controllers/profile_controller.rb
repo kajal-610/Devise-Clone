@@ -13,5 +13,5 @@ class ProfileController < ApplicationController
   def user_params
     params.permit(:first_name,:last_name,:mobile_no,:date_of_birth,:header_image)
   end
-  end
+end
 
